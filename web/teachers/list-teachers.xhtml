@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <h:head>
+             <title>#{str.teacherListTitle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h1>#{str.teacherListTitle}</h1>
+                    <h:form>
+                        <p:commandButton value="#{str.buttonAdd}" action="#{teacherBean.iniciar()}"></p:commandButton>
+                    </h:form>
+                    <p:dataTable value="#{teacherBean.teachers}" var="t">
+                        <p:column headerText="#{str.action}">
+                            <h:form>
+                                <p:commandButton value="#{str.buttonEdit}" action="#{teacherBean.editar(t)}"></p:commandButton>
+                            </h:form>
+                        </p:column>
+                        <p:column headerText="#{str.teacherNameHeader}">
+                            <p:outputLabel value="#{t.name}"></p:outputLabel>
+                        </p:column>
+                        <p:column headerText="#{str.teacherAddressHeader}">
+                            <p:outputLabel value="#{t.address}"></p:outputLabel>
+                        </p:column>
+                        
+                        <p:column headerText="#{str.teacherTelephoneHeader}">
+                            <p:outputLabel value="#{t.telephone}"></p:outputLabel>
+                        </p:column>
+                        
+                        <p:column headerText="#{str.teacherEmailHeader}">
+                            <p:outputLabel value="#{t.email}"></p:outputLabel>
+                        </p:column>
+
+
+                    </p:dataTable>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>
+

@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>utng.configuracion.strings</base-name>
+            <var>str</var>
+        </resource-bundle>           
+    </application>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>Home</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Consumers</from-outcome>
+            <to-view-id>/consumers/list-consumers.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Roles</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Modules</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+       
+        <navigation-case>
+            <from-outcome>Teachers</from-outcome>
+            <to-view-id>/teachers/list-teachers.xhtml</to-view-id>
+        </navigation-case>
+        
+        <navigation-case>
+            <from-outcome>Subjects</from-outcome>
+            <to-view-id>/subjects/list-subjects.xhtml</to-view-id>
+        </navigation-case>
+        
+        
+         <navigation-case>
+          <from-outcome>Logout</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    
+    
+    
+           
+        
+    
+    
+    
+    <navigation-rule>
+        <from-view-id>/consumers/form-consumers.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Save</from-outcome>
+            <to-view-id>/consumers/list-consumers.xhtml</to-view-id>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>Delete</from-outcome>
+            <to-view-id>/consumers/list-consumers.xhtml</to-view-id>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>Cancel</from-outcome>
+            <to-view-id>/consumers/list-consumers.xhtml</to-view-id>
+        </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+            <from-view-id>/consumers/list-consumers.xhtml</from-view-id>
+            <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/consumers/form-consumers.xhtml</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/consumers/form-consumers.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        
+        
+        
+        <navigation-rule>
+             <from-view-id>/roles/form-roles.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Delete</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        <navigation-rule>
+             <from-view-id>/roles/list-roles.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/roles/form-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/roles/form-roles.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        
+        
+        
+         <navigation-rule>
+             <from-view-id>/modules/form-modules.xhtml</from-view-id>
+             
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+            
+            
+            <navigation-case>
+                <from-outcome>Delete</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+         <navigation-rule>
+             <from-view-id>/modules/list-modules.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/modules/form-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/modules/form-modules.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <navigation-rule>
+             <from-view-id>/teachers/form-teachers.xhtml</from-view-id>
+             
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/teachers/list-teachers.xhtml</to-view-id>
+            </navigation-case>
+            
+            
+            <navigation-case>
+                <from-outcome>Delete</from-outcome>
+                <to-view-id>/teachers/list-teachers.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/teachers/list-teachers.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+         <navigation-rule>
+             <from-view-id>/teachers/list-teachers.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/teachers/form-teachers.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/teachers/form-teachers.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+     
+        
+        
+        
+     
+        
+        <navigation-rule>
+             <from-view-id>/subjects/form-subjects.xhtml</from-view-id>
+             
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/subjects/list-subjects.xhtml</to-view-id>
+            </navigation-case>
+            
+            
+            <navigation-case>
+                <from-outcome>Delete</from-outcome>
+                <to-view-id>/subjects/list-subjects.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/subjects/list-subjects.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+         <navigation-rule>
+             <from-view-id>/subjects/list-subjects.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/subjects/form-subjects.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/subjects/form-subjects.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+    
+       <navigation-rule>
+         <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Right</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Incorrect</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+</faces-config>

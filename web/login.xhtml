@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:b="http://bootsfaces.net/ui"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    
+    <h:head>
+
+        <title>#{str.loginTitle}</title>
+        <style type="text/css">
+            .form-signin{
+                margin:0 auto;
+                max-width: 330px;
+                padding:15px;
+                }
+        
+        </style>
+    </h:head>
+    <h:body style="padding-top:60px; background-color:darkcyan ">
+        <b:container>
+            <h:form styleClass="form-signin" prependId="false">  
+              <h2 class="form-signin-heading" >Ingresa tus datos</h2>
+              <b:inputText value="#{consumerBean.consumer.nameConsumer}"  id="consumer" placeholder="Consumer">
+                          <f:facet name="prepend">
+                                   <b:icon name="consumer"/>
+                 </f:facet>
+             </b:inputText>
+              
+              <b:inputText value="#{consumerBean.consumer.password}" id="password" type="password" placeholder="Password">
+              
+              <f:facet name="prepend">
+                  <b:iconAwesome name="key"/>
+                 </f:facet>
+              
+              </b:inputText>
+              <b:selectBooleanCheckbox value="true" caption="Recordar mi contraseña"/>
+             <b:commandButton  look="primary btn-block"
+                    action="#{consumerBean.login()}"
+                    value="#{str.loginButton}" icon="log-in"></b:commandButton>
+        </h:form>
+        
+        </b:container> 
+           
+    </h:body>
+</html>
+

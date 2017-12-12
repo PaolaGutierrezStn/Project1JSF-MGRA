@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+        <h:head>
+             <title>#{str.formTitle}</title>
+        </h:head>
+
+        <h:body>
+            <ui:composition template="/templates/template.xhtml">
+                <ui:define name="contenido">
+                    <h2>#{str.formHeader}</h2>
+                    <p:fieldset legend="#{str.legendForm}">
+                         <h:form>
+                             <h:panelGrid columns="1">
+                                 <p:inputText placeholder="#{str.namePrompt}" value="#{consumerBean.consumer.nameConsumer}"></p:inputText>
+                                 <p:inputText placeholder="#{str.passwordPrompt}" value="#{consumerBean.consumer.password}" type="password"></p:inputText>
+                                 <p:selectOneMenu value="#{usuarioBean.usuario.rol.idRol}">
+                                     <f:selectItems value="#{consumerBean.roles}" var="r" itemLabel="#{r.name}" itemValue="#{r.idRol}"></f:selectItems>                                     
+                                 </p:selectOneMenu>                                 
+                             </h:panelGrid>
+                             <p:commandButton value="#{str.buttonSave}" action="#{consumerBean.save()}" />
+                             <p:commandButton value="#{str.buttonDelete}" action="#{consumerBean.delete()}" />
+                             <p:commandButton value="#{str.buttonCancel}" action="#{consumerBean.cancel()}" />
+                          </h:form>
+                    </p:fieldset>
+                </ui:define>
+            </ui:composition>
+        </h:body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.teacherFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.teacherFormHeader}</h2>
+                <a href="list-modulos.xhtml"></a>
+                <p:fieldset legend="#{str.teacherLegendForm}">
+                <h:form>
+                    <p:inputText placeholder="#{str.teacherNamePrompt}" value="#{teacherBean.teacher.name}"></p:inputText>
+                    <p:inputText placeholder="#{str.teacherAddressPrompt}" value="#{teacherBean.teacher.address}"> </p:inputText>
+                     <p:inputText placeholder="#{str.teacherTelephonePrompt}" value="#{teacherBean.teacher.telephone}"></p:inputText>
+                    <p:inputText placeholder="#{str.teacherEmailPrompt}" value="#{teacherBean.teacher.email}"></p:inputText>
+                    <p:commandButton value="#{str.buttonSave}" action="#{teacherBean.guardar()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonDelete}" action="#{teacherBean.eliminar()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonCancel}" action="#{teaacherBean.cancelar()}"></p:commandButton>
+                </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
